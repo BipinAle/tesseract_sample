@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="all">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/relativeImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary">
+
+                    <boommba.com.myprototypes.imagecropper.customphoto.photoview.PhotoView
+                        android:id="@+id/photoView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="center"
+                        android:visibility="visible" />
+
+                    <boommba.com.myprototypes.imagecropper.customphoto.cropoverlay.CropOverlayView
+                        android:id="@+id/cropOverlayView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        app:borderColor="#00000000"
+                        app:cornerRadius="1dp"
+                        app:drawCircle="true"
+                        app:guideLines="false"
+                        app:lightTextColor="#552a2928"
+                        app:marginSide="0dp"
+                        app:marginTop="0dp" />
+
+
+                    <boommba.com.myprototypes.CircleOverLayView
+                        android:id="@+id/test"
+                        android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                        android:visibility="gone" />
+
+
+                    <ImageView
+                        android:id="@+id/imgImage"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_launcher"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/test1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:orientation="vertical"
+                    android:paddingBottom="16dp">
+
+                    <Button
+                        android:id="@+id/btnTakePicture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/colorPrimary"
+                        android:text="Take A Picture"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="17dp"
+
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/btnChooseGallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:visibility="visible"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimary"
+                        android:text="Choose from Gallery"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="19dp" />
+
+                    <Button
+                        android:id="@+id/doneCrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimary"
+                        android:text="Done Crop"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="19dp" />
+
+                    <TextView
+                        android:id="@+id/tv_scan_result"
+                        android:layout_width="match_parent"
+                        android:textColor="#000000"
+                        android:text="Scan Result"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
